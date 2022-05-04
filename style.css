@@ -42,7 +42,7 @@
 /* home section styling */
 .home{
     display: flex;
-    background: url("images/") no-repeat center;
+    background: url("images/banner.jpg") no-repeat center;
     height: 100vh;
     background-size: cover;
     background-attachment: fixed;
