@@ -68,7 +68,7 @@
 /* home section styling */
 .home {
     display: flex;
-    background: url("images/banner-dim.jpg") no-repeat left;
+    background: url("images/banner-dim.jpg") no-repeat center;
     height: 100vh;
     background-size: cover;
     background-attachment: fixed;
