@@ -112,14 +112,11 @@
     background: none;
 }
 
-/* about section styling */
-section{
+/* all similar content styling code */
+section {
     padding: 100px 0;
 }
-.about{
-    font-family: 'Poppins', sans-serif;
-}
-.about .title{
+section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -128,7 +125,7 @@ section{
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
-.about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -138,8 +135,7 @@ section{
     background: #111;
     transform: translateX(-50%);
 }
-.about .title::after{
-    content: "who i am";
+section .title::after{
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -149,7 +145,15 @@ section{
     background: #fff;
     transform: translateX(-50%);
 }
-.about .about-content{
+
+/* about section styling */
+.about, .education{
+    font-family: 'Poppins', sans-serif;
+}
+.about .title::after{
+    content: "who i am";
+}
+.about .about-content, .education .educ-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -172,11 +176,86 @@ section{
     font-weight: 600;
     margin-bottom: 10px;
 }
+.about .about-content .right .text span{
+    color: crimson;
+}
+.about .about-content .right p{
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: crimson;
+    background: none;
+}
+
+/* education section styling */
+.education{
+    color: #fff;
+    background: #111;
+}
+.education .title::before{
+    background: #fff;
+}
+.education .title::after{
+    background: #111;
+    content: "U of Michigan";
+}
+.education .educ-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+.education .educ-content .card:hover{
+    background: crimson;
+}
+.education .educ-content .card .box{
+    transition: all 0.3s ease;
+}
+.education .educ-content .card:hover .box{
+    transform: scale(1.05);
+}
+.education .educ-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.education .educ-content .card:hover i{
+    color: #fff;
+}
+.education .educ-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
 
 /* responsive media query start */
-@media (max-width: 1104px) {
+@media (max-width: 1300px) {
     .home .max-width{
         margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .about .about-content .left img {
+        height: 350px;
+        width: 350px;
     }
 }
 
@@ -226,6 +305,24 @@ section{
         font-size: 23px;
         padding: 10px 30px;
     }
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .education .educ-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 690px) {
@@ -240,6 +337,9 @@ section{
     }
     .home .home-content a{
         font-size: 20px;
+    }
+    .education .educ-content .card {
+        width: 100%;
     }
 }
 
