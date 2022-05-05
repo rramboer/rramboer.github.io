@@ -1,15 +1,23 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+:root{
+    /* color theme of the whole page */
+    --color-theme: #004eff;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
     margin: auto;
 }
+
 /* navbar styling */
 .navbar{
     position: fixed;
@@ -21,7 +29,7 @@
 }
 .navbar.sticky {
     padding: 15px 0;
-    background: crimson;
+    background: var(--color-theme);
 }
 .navbar .max-width{
     display: flex;
@@ -34,7 +42,7 @@
     font-weight: 600;
 }
 .navbar .logo a span {
-    color: crimson;
+    color: var(--color-theme);
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
@@ -52,7 +60,7 @@
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: crimson;
+    color: var(--color-theme);
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -64,6 +72,29 @@
     font-size: 23px;
     cursor: pointer;
     display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: var(--color-theme);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* home section styling */
@@ -93,22 +124,22 @@
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: crimson;
+    color: var(--color-theme);
     font-weight: 500;
 }
 .home .home-content a{
     display: inline-block;
-    background: crimson;
+    background: var(--color-theme);
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid var(--color-theme);
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-    color: crimson;
+    color: var(--color-theme);
     background: none;
 }
 
@@ -116,7 +147,7 @@
 section{
     padding: 100px 0;
 }
-.about, .education, .skills, .projs, .contact{
+.about, .education, .skills, .projs, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content, .education .educ-content, .skills .skills-content, .contact .contact-content{
@@ -149,7 +180,7 @@ section .title::after{
     bottom: -12px;
     left: 50%;
     font-size: 20px;
-    color: crimson;
+    color: var(--color-theme);
     padding: 5px;
     background: #fff;
     transform: translateX(-50%);
@@ -177,25 +208,33 @@ section .title::after{
     margin-bottom: 10px;
 }
 .about .about-content .right .text span{
-    color: crimson;
+    color: var(--color-theme);
 }
 .about .about-content .right p{
     text-align: justify;
 }
+.about .about-content .right p .uofm{
+    font-size: 16px;
+    font-weight: 600;
+    color: #00274c;
+    text-decoration: underline;
+    text-decoration-color: #ffcb05;
+    text-decoration-thickness: 3px;
+}
 .about .about-content .right a{
     display: inline-block;
-    background: crimson;
+    background: var(--color-theme);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid var(--color-theme);
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
-    color: crimson;
+    color: var(--color-theme);
     background: none;
 }
 
@@ -209,7 +248,7 @@ section .title::after{
 }
 .education .title::after, .projs .title::after{
     background: #111;
-    content: "U of Michigan";
+    content: "what i learned";
 }
 .education .educ-content .card{
     width: calc(33% - 20px);
@@ -217,12 +256,12 @@ section .title::after{
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
-    cursor: pointer;
+    cursor: crosshair;
     transition: all 0.3s ease;
     margin-bottom: 30px;
 }
 .education .educ-content .card:hover{
-    background: crimson;
+    background: var(--color-theme);
 }
 .education .educ-content .card .box{
     transition: all 0.3s ease;
@@ -232,7 +271,7 @@ section .title::after{
 }
 .education .educ-content .card i{
     font-size: 50px;
-    color: crimson;
+    color: var(--color-theme);
     transition: color 0.3s ease;
 }
 .education .educ-content .card:hover i{
@@ -261,18 +300,18 @@ section .title::after{
 }
 .skills .skills-content .left a{
     display: inline-block;
-    background: crimson;
+    background: var(--color-theme);
     color: #fff;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid var(--color-theme);
     transition: all 0.3s ease;
 }
 .skills .skills-content .left a:hover{
-    color: crimson;
+    color: var(--color-theme);
     background: none;
 }
 .skills .skills-content .right .bars {
@@ -300,7 +339,7 @@ section .title::after{
     height: 100%;
     left: 0;
     top: 0;
-    background: crimson;
+    background: var(--color-theme);
 }
 .skills-content .right .cpp::before {
     width: 95%;
@@ -348,8 +387,8 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .projs .carousel .card:hover{
-    background: crimson;
-    cursor: pointer;
+    background: var(--color-theme);
+    cursor: grab;
 }
 .projs .carousel .card .box{
     display: flex;
@@ -371,7 +410,7 @@ section .title::after{
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid crimson;
+    border: 5px solid var(--color-theme);
     transition: all 0.3s ease;
 }
 .projs .carousel .card:hover img{
@@ -387,7 +426,7 @@ section .title::after{
     margin: 0 5px;
     outline: none !important;
     border-radius: 50%;
-    border: 2px solid crimson !important;
+    border: 2px solid var(--color-theme) !important;
     transition: all 0.3s ease;
 }
 .owl-dot.active{
@@ -395,7 +434,7 @@ section .title::after{
     border-radius: 14px;
 }
 .owl-dot.active, .owl-dot:hover{
-    background: crimson !important;
+    background: var(--color-theme) !important;
 }
 
 /* contact section styling */
@@ -426,13 +465,80 @@ section .title::after{
 }
 .contact .contact-content .row i{
     font-size: 25px;
-    color: crimson;
+    color: var(--color-theme);
 }
 .contact .contact-content .info .head{
     font-weight: 500;
 }
 .contact .contact-content .info .sub-title{
     color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field, .contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+.contact .right form .field input, .contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+.contact .right form .button button{
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--color-theme);
+    background: var(--color-theme);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    color: var(--color-theme);
+    background: none;
+}
+
+/* footer section styling */
+footer{
+    background: #111;
+    padding: 20px 23px; 
+    color: #fff;
+}
+footer span a {
+    color: var(--color-theme);
+    text-decoration: none;
+    cursor: crosshair;
+}
+footer span a:hover{
+    text-decoration: underline;
 }
 
 
@@ -514,7 +620,7 @@ section .title::after{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-    .skills .skills-content .column {
+    .skills .skills-content .column, .contact .contact-content .column{
         width: 100%;
         margin-bottom: 35px;
     }
