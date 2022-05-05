@@ -113,13 +113,13 @@
 }
 
 /* all similar content styling code */
-section {
+section{
     padding: 100px 0;
 }
-.about, .education, .skills {
+.about, .education, .skills, .projs, .contact{
     font-family: 'Poppins', sans-serif;
 }
-.about .about-content, .education .educ-content, .skills .skills-content{
+.about .about-content, .education .educ-content, .skills .skills-content, .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -200,14 +200,14 @@ section .title::after{
 }
 
 /* education section styling */
-.education{
+.education, .projs{
     color: #fff;
     background: #111;
 }
-.education .title::before{
+.education .title::before, .projs .title::before{
     background: #fff;
 }
-.education .title::after{
+.education .title::after, .projs .title::after{
     background: #111;
     content: "U of Michigan";
 }
@@ -228,7 +228,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .education .educ-content .card:hover .box{
-    transform: scale(1.05);
+    transform: scale(1.07);
 }
 .education .educ-content .card i{
     font-size: 50px;
@@ -336,7 +336,104 @@ section .title::after{
     width: 85%;
 }
 
+/* projects section styling */
+.projs .title::after{
+    content: "what i made";
+}
+.projs .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.projs .carousel .card:hover{
+    background: crimson;
+    cursor: pointer;
+}
+.projs .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.projs .carousel .card:hover .box{
+    transform: scale(0.85);
+}
+.projs .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.projs .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.projs .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid crimson !important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active, .owl-dot:hover{
+    background: crimson !important;
+}
 
+/* contact section styling */
+.contact .title::after{
+    content: "get in touch";
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p {
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: crimson;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
 
 
 /* responsive media query start */
