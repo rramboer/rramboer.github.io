@@ -553,21 +553,21 @@ footer span a:hover{
 
 
 /* responsive media query start */
-@media (max-width: 1300px) {
+@media (max-width: 1300px){
     .home .max-width{
         margin-left: 0px;
     }
 }
 
-@media (max-width: 1104px) {
-    .about .about-content .left img {
+@media (max-width: 1104px){
+    .about .about-content .left img{
         height: 350px;
         width: 350px;
     }
 }
 
-@media (max-width: 991px) {
-    .max-width {
+@media (max-width: 991px){
+    .max-width{
         padding: 0 50px;
     }
 }
@@ -636,8 +636,8 @@ footer span a:hover{
     }
 }
 
-@media (max-width: 690px) {
-    .max-width {
+@media (max-width: 690px){
+    .max-width{
         padding: 0 23px;
     }
     .home .home-content .text-2{
