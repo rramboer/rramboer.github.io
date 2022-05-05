@@ -48,11 +48,11 @@ html{
 .navbar.sticky .logo a span{
     color: #fff;
 }
-.navbar .menu li {
+.navbar .menu li{
     list-style: none;
     display: inline-block;
 }
-.navbar .menu li a {
+.navbar .menu li a{
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -140,7 +140,8 @@ html{
 }
 .home .home-content a:hover{
     color: var(--color-theme);
-    background: none;
+    background: #ccc;
+    opacity: 0.85;
 }
 
 /* all similar content styling code */
@@ -159,7 +160,7 @@ section{
 section .title{
     position: relative;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px;
@@ -170,7 +171,7 @@ section .title::before{
     position: absolute;
     bottom: 0px;
     left: 50%;
-    width: 180px;
+    width: 200px;
     height: 3px;
     background: #111;
     transform: translateX(-50%);
@@ -191,34 +192,35 @@ section .title::after{
     content: "who i am";
 }
 .about .about-content .left{
-    width: 45%;
+    width: 40%;
 }
 .about .about-content .left img{
     height: 400px;
     width: 400px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 20px;
 }
 .about .about-content .right{
     width: 55%;
 }
 .about .about-content .right .text{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .about .about-content .right .text span{
     color: var(--color-theme);
 }
 .about .about-content .right p{
     text-align: justify;
+    font-size: 120%;
 }
 .about .about-content .right p .uofm{
-    font-size: 16px;
+    font-size: 130%;
     font-weight: 600;
-    color: #00274c;
+    color: #00285e; /* blue */
     text-decoration: underline;
-    text-decoration-color: #ffcb05;
+    text-decoration-color: #ffce00; /* maize */
     text-decoration-thickness: 3px;
 }
 .about .about-content .right a{
@@ -473,6 +475,12 @@ section .title::after{
 .contact .contact-content .info .sub-title{
     color: #333;
 }
+.contact .contact-content .info .sub-title a{
+    color: var(--color-theme);
+}
+.contact .contact-content .info .sub-title a:hover{
+    text-decoration: underline;
+}
 .contact .right form .fields{
     display: flex;
 }
@@ -482,7 +490,7 @@ section .title::after{
     margin-bottom: 15px;
 }
 .contact .right form .textarea{
-    height: 80px;
+    height: 100px;
     width: 100%;
 }
 .contact .right form .name{
@@ -495,7 +503,7 @@ section .title::after{
     height: 100%;
     width: 100%;
     border: 1px solid lightgray;
-    border-radius: 6px;
+    border-radius: 10px;
     outline: none;
     padding: 0 15px;
     font-size: 17px;
@@ -515,6 +523,7 @@ section .title::after{
     border: 2px solid var(--color-theme);
     background: var(--color-theme);
     color: #fff;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
     font-weight: 500;
     border-radius: 6px;
@@ -531,6 +540,7 @@ footer{
     background: #111;
     padding: 20px 23px; 
     color: #fff;
+    text-align: center;
 }
 footer span a {
     color: var(--color-theme);

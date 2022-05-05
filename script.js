@@ -32,9 +32,9 @@ $(document).ready(function(){
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Student", "Intern", "Hockey Player", "Web Designer", "Options Trader", "Dog Owner", "Rocket Enthusiast", "Tutor"],
-        typeSpeed: 80,
-        backSpeed: 30,
+        strings: ["Student", "Hockey Player", "Web Designer", "Options Trader", "Dog Lover", "Tennis Player", "Rocket Enthusiast", "Tutor", "Formula 1 Fan", "Lifelong Learner"],
+        typeSpeed: 40,
+        backSpeed: 20,
         loop: true
     });
 
