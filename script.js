@@ -32,7 +32,7 @@ $(document).ready(function(){
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Student", "Hockey Player", "Web Designer", "Options Trader", "Dog Lover", "Tennis Player", "Rocket Enthusiast", "Tutor", "Formula 1 Fan", "Lifelong Learner"],
+        strings: ["Student", "Hockey Player", "Web Designer", "Chess Player", "Options Trader", "Dog Lover", "Tennis Player", "Rocket Enthusiast", "Tutor", "Formula 1 Fan", "Lifelong Learner"],
         typeSpeed: 40,
         backSpeed: 20,
         loop: true
