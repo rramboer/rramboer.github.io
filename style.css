@@ -1,7 +1,13 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 :root{
     /* color theme of the whole page */
-    --color-theme: #004eff;
+    --color-theme-1: #004eff; /* blue       */
+    --color-theme-2: #ffce00; /* yellow     */
+    --color-theme-3: #ff0000; /* red        */
+    --color-theme-4: #00bba1; /* blue-green */
+    --color-theme-5: #ff00cb; /* pink       */
+    --color-theme-6: #9900c6; /* purple     */
+    --color-theme: var(--color-theme-1);
 }
 *{
     margin: 0;
