@@ -9,7 +9,7 @@
     --color-theme-6: #9900c6; /* purple     */
     --color-theme-7: #1eb600; /* green      */
     --color-theme-8: #f45a00; /* orange     */
-    --color-theme: var(--color-theme-8);
+    --color-theme: var(--color-theme-1);
 }
 *{
     margin: 0;
