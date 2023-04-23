@@ -1,5 +1,5 @@
-$(document).ready(function(){
-    $(window).scroll(function(){
+$(document).ready(function () {
+    $(window).scroll(function () {
         if (this.scrollY > 20) {
             $('.navbar').addClass("sticky");
         } else {
@@ -18,7 +18,7 @@ $(document).ready(function(){
     });
 
     // toggle menu/navbar script
-    $('.menu-btn').click(function(){
+    $('.menu-btn').click(function () {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
@@ -32,7 +32,7 @@ $(document).ready(function(){
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["Student", "Hockey Player", "Web Designer", "Chess Player", "Options Trader", "Dog Lover", "Tennis Player", "Rocket Enthusiast", "Tutor", "Formula 1 Fan", "Lifelong Learner"],
+        strings: ["Student", "Hockey Player", "Web Designer", "Chess Player", "Options Trader", "Dog Lover", "Tennis Player", "Lifelong Learner"],
         typeSpeed: 40,
         backSpeed: 20,
         loop: true
@@ -46,15 +46,15 @@ $(document).ready(function(){
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
         responsive: {
-            0:{
+            0: {
                 items: 1,
                 nav: false
             },
-            600:{
+            600: {
                 items: 2,
                 nav: false
             },
-            1000:{
+            1000: {
                 items: 3,
                 nav: false
             }
