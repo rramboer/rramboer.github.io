@@ -38,7 +38,7 @@ html {
 }
 
 .max-width {
-    max-width: 1300px;
+    max-width: 1500px;
     padding: 0 80px;
     margin: auto;
 }
@@ -50,7 +50,7 @@ html {
     z-index: 999;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .navbar.sticky {
@@ -62,6 +62,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1300px;
 }
 
 .navbar .logo a {
@@ -370,11 +371,11 @@ section .title::after {
 }
 
 .skills .skills-content .left {
-    width: 30%;
+    width: 23%;
 }
 
 .skills .skills-content .right {
-    width: 65%;
+    width: 75%;
 }
 
 .skills .skills-content .left .text {
@@ -409,14 +410,14 @@ section .title::after {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .skills .skills-content .right .icon {
     width: auto;
     height: 60px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .skills .skills-content .card {
@@ -426,24 +427,25 @@ section .title::after {
     text-align: center;
     border-radius: 6px;
     padding: 12px 12px;
-    transition: all 0.3s ease;
-    margin-bottom: 15px;
+    padding-bottom: 0px;
+    transition: all 0.1s ease;
+    margin-bottom: 10px;
     margin-right: 15px;
-    min-width: 180px;
+    min-width: 160px;
 }
 
 .skills .skills-content .card .box {
     transition: all 0.3s ease;
 }
 
-.skills .skills-content .card:hover .box {
-    transform: scale(1.07);
+.skills .skills-content .card:hover .icon {
+    transform: scale(1.7);
 }
 
 .skills .skills-content .card .text {
     font-size: 25px;
     font-weight: 800;
-    margin: 10px 0 7px 0;
+    margin-top: 7px;
 }
 
 /* projects section styling */
