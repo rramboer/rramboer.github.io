@@ -691,6 +691,20 @@ footer span a:hover {
 }
 
 
+
+.icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
 /* responsive media query start */
 @media (max-width: 1300px) {
     .home .max-width {
