@@ -21,6 +21,11 @@
     --color-theme: var(--color-theme-1);
 }
 
+::selection {
+    background: yellow;
+    color: var(--color-theme);
+}
+
 * {
     margin: 0;
     padding: 0;
