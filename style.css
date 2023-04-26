@@ -276,11 +276,11 @@ section .title::after {
 
 .about .about-content .right p {
     text-align: justify;
-    font-size: 120%;
+    font-size: 130%;
 }
 
 .about .about-content .right p .uofm {
-    font-size: 130%;
+    font-size: 100%;
     font-weight: 600;
     color: #00285e;
     /* blue */
