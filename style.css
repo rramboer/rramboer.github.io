@@ -337,7 +337,8 @@ section .title::after {
     margin-bottom: 30px;
 }
 
-.education .educ-content .card:hover {
+.education .educ-content .card:hover,
+.education .educ-content .card:focus {
     background: var(--color-theme);
 }
 
@@ -345,7 +346,8 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.education .educ-content .card:hover .box {
+.education .educ-content .card:hover .box,
+.education .educ-content .card:focus .box {
     transform: scale(1.07);
 }
 
@@ -355,7 +357,8 @@ section .title::after {
     transition: color 0.3s ease;
 }
 
-.education .educ-content .card:hover i {
+.education .educ-content .card:hover i,
+.education .educ-content .card:focus i {
     color: #fff;
 }
 
@@ -401,7 +404,8 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.skills .skills-content .left a:hover {
+.skills .skills-content .left a:hover,
+.skills .skills-content .left a:focus {
     color: var(--color-theme);
     background: none;
 }
@@ -438,7 +442,8 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.skills .skills-content .card:hover .icon {
+.skills .skills-content .card:hover .icon,
+.skills .skills-content .card:focus .icon {
     transform: scale(1.7);
 }
 
