@@ -55,10 +55,10 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            600: {
+            400: {
                 items: 2
             },
-            850: {
+            700: {
                 items: 3
             },
             1350: {

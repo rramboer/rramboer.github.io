@@ -18,7 +18,7 @@
     /* green      */
     --color-theme-8: #f45a00;
     /* orange     */
-    --color-theme: var(--color-theme-6);
+    --color-theme: var(--color-theme-1);
 }
 
 ::selection {
@@ -270,7 +270,7 @@ section .title::after {
 .about .about-content .right .text {
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .about .about-content .right .text span {
@@ -388,14 +388,14 @@ section .title::after {
 .education .educ-content .degree {
     background-color: #222;
     padding: 15px;
-    border-radius: 6px;
+    border-radius: 20px;
     margin: 3px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     width: 70%;
-    box-shadow: -10px 10px 100px rgba(215, 215, 215, 0.25);
+    box-shadow: 0px 0px 80px var(--color-theme);
     transition: all 0.3s ease;
 }
 
@@ -522,7 +522,6 @@ section .title::after {
 }
 
 
-
 /* skills section styling */
 .skills .title::after {
     content: "";
@@ -589,7 +588,6 @@ section .title::after {
     padding: 12px 12px;
     padding-bottom: 5px;
     transition: all 0.1s ease;
-    min-width: 160px;
     max-width: 200px;
 }
 
@@ -838,16 +836,107 @@ footer span a:hover {
     }
 }
 
-@media (max-width: 1104px) {
+@media (max-width: 1200px) {
     .about .about-content .left img {
         height: 350px;
         width: 350px;
     }
 }
 
+@media (max-width: 1180px) {
+    .education .max-width {
+        padding: 0 20px;
+    }
+
+    .projs .max-width {
+        padding: 0 30px;
+    }
+
+    .skills .skills-content .card {
+        width: 19%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .home .home-content .text-1 {
+        font-size: 2rem;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 2.5rem;
+    }
+
+    .about .about-content .left img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .about .about-content .right {
+        font-size: smaller;
+    }
+
+    .about .about-content .right .text {
+        font-size: 22px;
+    }
+
+    .skills .skills-content .card .text {
+        font-size: 20px;
+    }
+
+    .skills .max-width {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 1010px) {
+    .education .educ-content .degree {
+        width: 80%;
+    }
+
+    .education .educ-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education .educ-content .coursework {
+        width: 80%;
+    }
+
+    .education .educ-content .activities {
+        width: 100%;
+    }
+
+    .education .educ-content .activities .items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .education .educ-content .activities .items .item {
+        width: 45%;
+    }
+}
+
 @media (max-width: 991px) {
     .max-width {
         padding: 0 50px;
+    }
+
+    .contact .contact-content {
+        justify-content: center;
+    }
+
+    .contact .contact-content .left {
+        width: 40%;
+    }
+
+    .contact .contact-content .right {
+        width: 50%;
     }
 }
 
@@ -869,7 +958,7 @@ footer span a:hover {
         top: 0;
         background: #111;
         text-align: center;
-        padding-top: 80px;
+        padding-top: 120px;
         transition: all 0.3s ease;
     }
 
@@ -901,7 +990,7 @@ footer span a:hover {
     }
 
     .max-width {
-        max-width: 800px;
+        padding: 0 30px;
     }
 
     .about .about-content .column {
@@ -918,21 +1007,77 @@ footer span a:hover {
         flex: 100%;
     }
 
-    .education .educ-content .card {
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
-
-    .skills .skills-content .column,
-    .contact .contact-content .column {
+    .skills .skills-content .column {
         width: 100%;
         margin-bottom: 35px;
     }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 910px) {
+    .education .educ-content .degree {
+        width: 90%;
+    }
+
+    .education .educ-content .coursework {
+        width: 90%;
+    }
+
+    .education .educ-content .card {
+        width: 24%;
+    }
+
+    .education .educ-content .activities .items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education .educ-content .activities .items .item {
+        width: 70%;
+    }
+
+    .projs .carousel .card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 775px) {
+    section {
+        padding: 50px 0;
+    }
+
+    .education .educ-content .degree {
+        width: 95%;
+    }
+
+    .education .educ-content .degree .right {
+        font-size: smaller;
+    }
+
+    .education .educ-content .coursework {
+        width: 100%;
+    }
+
+    .skills .skills-content .right img.icon {
+        height: 45px;
+    }
+
+    .skills .skills-content .card .text {
+        font-size: 17px;
+    }
+
+    .projs .carousel .card {
+        font-size: smaller;
+    }
+
+    .projs .carousel .card img {
+        height: 110px;
+        width: 110px;
+    }
+}
+
+@media (max-width: 697px) {
     .max-width {
-        padding: 0 23px;
+        padding: 0 20px;
     }
 
     .home .home-content .text-2 {
@@ -948,16 +1093,116 @@ footer span a:hover {
     }
 
     .education .educ-content .card {
+        font-size: smaller;
+        width: 23%;
+    }
+
+    .skills .skills-content .card .text {
+        font-size: 15px;
+    }
+
+    .contact .contact-content .column {
         width: 100%;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 623px) {
+    .education .educ-content .degree {
+        width: 100%;
+        font-size: smaller;
+    }
+
+    .education .educ-content .activities .items .item {
+        font-size: smaller;
+    }
+
+    .education .educ-content .activities .items .item img {
+        width: 70px;
+    }
+
+    .skills .skills-content {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .skills .skills-content .card {
+        width: 31%;
+        padding: 10px;
+    }
+
+    .skills .skills-content .card .text {
+        margin: 0;
+    }
+
+    .skills .skills-content .card .box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 570px) {
+    .max-width {
+        padding: 0 12px;
+    }
+
     .home .home-content .text-2 {
         font-size: 50px;
     }
 
     .home .home-content .text-3 {
         font-size: 27px;
+    }
+
+    .about .about-content .right {
+        font-size: smaller;
+    }
+
+    .about .about-content .right .text {
+        font-size: 20px;
+    }
+
+    .skills .skills-content .right img.icon {
+        height: 35px;
+    }
+
+    .projs .carousel .card .text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about .about-content .left img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .about .about-content .right {
+        text-align: center;
+        font-size: smaller;
+    }
+
+    .about .about-content .right p {
+        text-align: left;
+    }
+
+    .education .educ-content .card {
+        width: 31%;
+    }
+
+    .skills .skills-content .card {
+        width: 49%;
+    }
+}
+
+@media (max-width: 380px) {
+    .education .educ-content .card {
+        width: 40%;
+    }
+
+    .projs .carousel .card img {
+        height: 160px;
+        width: 160px;
     }
 }
