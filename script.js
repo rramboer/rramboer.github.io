@@ -45,24 +45,50 @@ $(document).ready(function () {
 
     // owl carousel script
     $('.owl-carousel').owlCarousel({
-        margin: 20,
+        margin: 10,
         loop: true,
         autoplay: true,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
+        nav: false,
         responsive: {
             0: {
-                items: 1,
-                nav: false
+                items: 1
             },
             600: {
-                items: 2,
-                nav: false
+                items: 2
             },
-            1000: {
-                items: 3,
-                nav: false
+            850: {
+                items: 3
+            },
+            1350: {
+                items: 4
+            },
+            1650: {
+                items: 5
             }
         }
     });
+
+    const rotatingLogos = document.querySelectorAll('.skills .skills-content .card');
+
+    rotatingLogos.forEach(logo => {
+        logo.addEventListener('mouseenter', () => {
+            logo.querySelector(".icon").style.transform = `rotate(${Math.random() * 40 - 20}deg) scale(1.7)`;
+        });
+        logo.addEventListener('focus', () => {
+            logo.querySelector(".icon").style.transform = `rotate(${Math.random() * 40 - 20}deg) scale(1.7)`;
+        });
+        logo.addEventListener('mouseleave', () => {
+            logo.querySelector(".icon").style.transform = `rotate(0deg) scale(1)`;
+        });
+        logo.addEventListener('blur', () => {
+            logo.querySelector(".icon").style.transform = `rotate(0deg) scale(1)`;
+        });
+    });
+
+
+
+
 });
+
