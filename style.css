@@ -2,7 +2,7 @@
 
 :root {
     /* color theme of the whole page */
-    --color-theme-1: #004eff;
+    --color-theme-1: #3572ff;
     /* blue       */
     --color-theme-2: #ffce00;
     /* yellow     */
@@ -18,12 +18,12 @@
     /* green      */
     --color-theme-8: #f45a00;
     /* orange     */
-    --color-theme: var(--color-theme-1);
+    --color-theme: var(--color-theme-6);
 }
 
 ::selection {
-    background: yellow;
-    color: var(--color-theme);
+    background: var(--color-theme);
+    color: white;
 }
 
 * {
@@ -151,23 +151,24 @@ html {
 }
 
 .home .home-content .text-1 {
-    font-size: 27px;
+    font-size: 2.5rem;
 }
 
 .home .home-content .text-2 {
-    font-size: 75px;
+    font-size: 6rem;
     font-weight: 600;
-    margin-left: -3px;
+    margin-top: 20px;
 }
 
 .home .home-content .text-3 {
-    font-size: 40px;
-    margin: 5px 0;
+    font-size: 3rem;
+    margin-top: 20px;
 }
 
 .home .home-content .text-3 span {
     color: var(--color-theme);
-    font-weight: 500;
+    font-weight: 800;
+    font-family: monospace;
 }
 
 .home .home-content a {
@@ -188,7 +189,6 @@ html {
     opacity: 0.85;
 }
 
-/* all similar content styling code */
 section {
     padding: 100px 0;
 }
@@ -246,7 +246,7 @@ section .title::after {
 
 /* about section styling */
 .about .title::after {
-    content: "who i am";
+    content: "";
 }
 
 .about .about-content .left {
@@ -261,7 +261,10 @@ section .title::after {
 }
 
 .about .about-content .right {
-    width: 55%;
+    width: 60%;
+    background-color: #ddd;
+    padding: 30px;
+    border-radius: 20px;
 }
 
 .about .about-content .right .text {
@@ -279,18 +282,7 @@ section .title::after {
     font-size: 130%;
 }
 
-.about .about-content .right p .uofm {
-    font-size: 100%;
-    font-weight: 600;
-    color: #00285e;
-    /* blue */
-    text-decoration: underline;
-    text-decoration-color: #ffce00;
-    /* maize */
-    text-decoration-thickness: 3px;
-}
-
-.about .about-content .right a {
+.about .about-content .right a.button {
     display: inline-block;
     background: var(--color-theme);
     color: #fff;
@@ -303,7 +295,17 @@ section .title::after {
     transition: all 0.3s ease;
 }
 
-.about .about-content .right a:hover {
+.about .about-content .right a.factset {
+    color: var(--color-theme);
+    font-weight: 600;
+}
+
+.about .about-content .right a.uofm {
+    color: var(--color-theme);
+    font-weight: 600;
+}
+
+.about .about-content .right a.button:hover {
     color: var(--color-theme);
     background: none;
 }
@@ -323,18 +325,22 @@ section .title::after {
 .education .title::after,
 .projs .title::after {
     background: #111;
-    content: "what i learned";
+    content: "";
+}
+
+.education .educ-content {
+    flex-direction: row;
+    justify-content: center;
 }
 
 .education .educ-content .card {
-    width: calc(33% - 20px);
     background: #222;
     text-align: center;
     border-radius: 6px;
-    padding: 20px 25px;
+    padding: 10px 15px;
     cursor: crosshair;
     transition: all 0.3s ease;
-    margin-bottom: 30px;
+    margin: 3px;
 }
 
 .education .educ-content .card:hover,
@@ -352,7 +358,7 @@ section .title::after {
 }
 
 .education .educ-content .card i {
-    font-size: 50px;
+    font-size: 30px;
     color: var(--color-theme);
     transition: color 0.3s ease;
 }
@@ -362,15 +368,55 @@ section .title::after {
     color: #fff;
 }
 
-.education .educ-content .card .text {
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
+.education .educ-content .degree {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    gap: 20px;
 }
+
+.education .educ-content .degree .left {
+    width: 30%;
+}
+
+.education .educ-content .degree img {
+    width: 100%;
+    border-radius: 20%;
+    border: 2px solid #ffcb05;
+}
+
+.education .educ-content .degree .right {
+    width: 60%;
+}
+
+.education .educ-content .degree .right .text {
+    font-size: 200%;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.education .educ-content .degree .right .date {
+    text-align: justify;
+}
+
+.education .educ-content .degree .right .gpa {
+    color: var(--color-theme);
+}
+
+
+
+
+
 
 /* skills section styling */
 .skills .title::after {
-    content: "what i know";
+    content: "";
 }
 
 .skills .skills-content .left {
@@ -455,7 +501,7 @@ section .title::after {
 
 /* projects section styling */
 .projs .title::after {
-    content: "what i made";
+    content: "";
 }
 
 .projs .carousel .card {
@@ -531,7 +577,7 @@ section .title::after {
 
 /* contact section styling */
 .contact .title::after {
-    content: "get in touch";
+    content: "";
 }
 
 .contact .contact-content .column {

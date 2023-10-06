@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Ryan Ramboer" />
     <meta name="keywords" content="Ryan Ramboer, portfolio, website, swe, recruit, jobs, software engineering" />
-    <meta name="description" content="Ryan's Portfolio" />
-    <title>Ryan's Portfolio</title>
+    <meta name="description" content="Ryan's Personal Website" />
+    <title>Ryan's Personal Website</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="images/favicon.ico" />
     <script src="https://kit.fontawesome.com/6e37128a3a.js" crossorigin="anonymous"></script>
@@ -27,7 +27,7 @@
         <div class="max-width">
             <div class="logo"><a href="#">Ryan <span>Ramboer</span></a></div>
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
+                <!-- <li><a href="#home">Home</a></li> -->
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -46,8 +46,9 @@
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Ryan Ramboer</div>
-                <div class="text-3">and I'm a <span class="typing"></span></div>
-                <a href="#contact">Hire Me</a>
+                <div class="text-3">and <span class="typing"></span></div>
+                <a href="https://rramboer.github.io/resume/" target="_blank"><i class="fa-solid fa-file-arrow-down"></i>
+                    View Resume</a>
             </div>
         </div>
     </section>
@@ -58,15 +59,18 @@
             <h2 class="title">About Me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="images/suit.jpg"
-                        alt="Photo of the creator of this website wearing a printed cicuit board tie" />
+                    <img src="images/Headshot.jpg" alt="Photo of the creator of this website" />
                 </div>
                 <div class="column right">
                     <div class="text" style="padding-bottom: 0px">I'm Ryan and I'm a: </div>
                     <div class="text" style="padding-top: 0px"><span class="typing-2"></span></div>
-                    <p>I'm a senior at the <span class="uofm">University of Michigan</span>. I will earn a
-                        Bachelor of Science in Engineering degree in Computer Science in December 2023!</p>
-                    <a href="https://rramboer.github.io/resume/" target="_blank"><i
+                    <p>I'm a software engineer at
+                        <a class="factset" href="https://www.factset.com/" target="_blank">FactSet</a>
+                        with a Bachelor of Science in Engineering degree in Computer Science from the
+                        <a class="uofm" href="https://eecs.engin.umich.edu/" target="_blank">University of Michigan</a>!
+                        I am interested in software engineering and financial markets and technology.
+                    </p>
+                    <a class="button" href="https://rramboer.github.io/resume/" target="_blank"><i
                             class="fa-solid fa-file-arrow-down"></i>
                         View Resume</a>
                 </div>
@@ -77,101 +81,124 @@
     <!-- education section start -->
     <section class="education" id="education">
         <div class="max-width">
-            <h2 class="title">My Education</h2>
+            <h2 class="title">Education</h2>
             <div class="educ-content">
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-sitemap"></i>
-                        <div class="text">Data Structures & Algorithms</div>
-                        <p>EECS 281</p>
+                <div class="degree">
+                    <div class="left">
+                        <img class="logo" src="images/uofm.png" alt="University of Michigan logo" />
+                    </div>
+                    <div class="right">
+                        <p class="text">BSE Computer Science</p>
+                        <p class="date">Graduated December 2023</p>
+                        <p class="gpa">GPA: 3.84/4.00</p>
+                        <p class="awards">Awards: Dean's List, University Honors, James P. Angell Scholar</p>
                     </div>
                 </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-microchip"></i>
-                        <div class="text">Computer Organization</div>
-                        <p>EECS 370</p>
+                <div class="activities">
+                    <p class="text">Extracurricular Activities</p>
+                    <div class="items">
+                        <div class="item">
+                            <img src="" alt="">
+                            <p class="text"></p>
+                            <p class="date"></p>
+                            <p class="desc"></p>
+                        </div>
+                        <div class="item">
+
+                        </div>
+                        <div class="item">
+
+                        </div>
                     </div>
                 </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-network-wired"></i>
-                        <div class="text">Foundations of Computer Science</div>
-                        <p>EECS 376</p>
-                    </div>
-                </div>
+                <div class="coursework">
+                    <div class="text">Coursework</div>
+                    <div class="courses">
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-sitemap"></i>
+                                <div class="text">Data Structures & Algorithms</div>
+                            </div>
+                        </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-user-secret"></i>
-                        <div class="text">Computer Security</div>
-                        <p>EECS 388</p>
-                    </div>
-                </div>
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-microchip"></i>
+                                <div class="text">Computer Organization</div>
+                            </div>
+                        </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-code-branch"></i>
-                        <div class="text">Software Engineering</div>
-                        <p>EECS 481</p>
-                    </div>
-                </div>
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-network-wired"></i>
+                                <div class="text">Foundations of Computer Science</div>
+                            </div>
+                        </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-brain"></i>
-                        <div class="text">Artificial Intelligence</div>
-                        <p>EECS 492</p>
-                    </div>
-                </div>
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-user-secret"></i>
+                                <div class="text">Computer Security</div>
+                            </div>
+                        </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-code"></i>
-                        <div class="text">User Interface Development</div>
-                        <p>EECS 493</p>
-                    </div>
-                </div>
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-code-branch"></i>
+                                <div class="text">Software Engineering</div>
+                            </div>
+                        </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                        <div class="text">Linear Algebra</div>
-                        <p>MATH 214</p>
-                    </div>
-                </div>
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-brain"></i>
+                                <div class="text">Artificial Intelligence</div>
+                            </div>
+                        </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-chart-area"></i>
-                        <div class="text">Multivariable & Vector Calculus</div>
-                        <p>MATH 215</p>
-                    </div>
-                </div>
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-code"></i>
+                                <div class="text">User Interface Development</div>
+                            </div>
+                        </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-globe"></i>
-                        <div class="text">Web Design & Development</div>
-                        <p>SI 339</p>
-                    </div>
-                </div>
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                <div class="text">Linear Algebra</div>
+                            </div>
+                        </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-plug-circle-bolt"></i>
-                        <div class="text">Electricity & Magnetism</div>
-                        <p>PHYSICS 240</p>
-                    </div>
-                </div>
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-chart-area"></i>
+                                <div class="text">Multivariable & Vector Calculus</div>
+                            </div>
+                        </div>
 
-                <div class="card" tabindex="0">
-                    <div class="box">
-                        <i class="fa-solid fa-compass-drafting"></i>
-                        <div class="text">Materials & Manufacturing</div>
-                        <p>MATSCIE 220</p>
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-globe"></i>
+                                <div class="text">Web Design & Development</div>
+                            </div>
+                        </div>
+
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-plug-circle-bolt"></i>
+                                <div class="text">Electricity & Magnetism</div>
+                            </div>
+                        </div>
+
+                        <div class="card" tabindex="0">
+                            <div class="box">
+                                <i class="fa-solid fa-compass-drafting"></i>
+                                <div class="text">Materials & Manufacturing</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -182,7 +209,7 @@
     <!-- skills section start -->
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">My Skills</h2>
+            <h2 class="title">Skills</h2>
             <div class="skills-content">
                 <div class="column left">
                     <div class="text">Like what you see?</div>
@@ -303,7 +330,7 @@
     <!-- projects section start -->
     <section class="projs" id="projs">
         <div class="max-width">
-            <h2 class="title">My Projects</h2>
+            <h2 class="title">Projects</h2>
             <div class="carousel owl-carousel">
 
                 <div class="card">
@@ -336,8 +363,7 @@
                             <img src="images/recipebook.png" alt="Screenshot of the recipe book homepage" />
                             <div class="text">Healthy For Life Recipe Book</div>
                             <p>Web-based recipe book designed for accessibility and extensibility using HTML, Bootstrap,
-                                Vue.js, and JSON
-                            </p>
+                                Vue.js, and JSON</p>
                         </a>
                     </div>
                 </div>
@@ -373,7 +399,7 @@
                             <img src="images/cf.png" alt="Logo from the 2022 Fall Engineering Career Fair" />
                             <div class="text">Engineering Career Fair Website</div>
                             <p>Constructed and maintained the website for the University of Michigan Fall Engineering
-                                Career Fair, generating $250,000+ and 25,000+ clicks</p>
+                                Career Fair, generating $250,000+ and 25,000+ visits</p>
                         </a>
                     </div>
                 </div>
@@ -434,7 +460,7 @@
     <!-- contact section start -->
     <section class="contact" id="contact">
         <div class="max-width">
-            <h2 class="title">Contact Me</h2>
+            <h2 class="title">Contact</h2>
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get In Touch</div>
