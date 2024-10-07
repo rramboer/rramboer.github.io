@@ -401,7 +401,7 @@ section .title::after {
 
 .education .educ-content .degree:hover,
 .education .educ-content .degree:focus {
-    box-shadow: -10px 10px 50px rgba(215, 215, 215, 0.25);
+    box-shadow: -10px 10px 50px #ffcb05;
 }
 
 .education .educ-content .degree .left {
@@ -499,8 +499,11 @@ section .title::after {
 .education .educ-content .activities .items .item img {
     width: 91px;
     border-radius: 20%;
-    margin-right: 10px;
-    align-self: flex-start;
+    margin-right: 20px;
+}
+
+.education .educ-content .activities .items .item a {
+    display: flex;
 }
 
 .education .educ-content .activities .items .item .words {

@@ -43,7 +43,7 @@ $(document).ready(function () {
         loop: true
     });
 
-    // owl carousel script
+    // projects carousel script
     $('.owl-carousel').owlCarousel({
         margin: 10,
         loop: true,
@@ -86,9 +86,5 @@ $(document).ready(function () {
             logo.querySelector(".icon").style.transform = `rotate(0deg) scale(1)`;
         });
     });
-
-
-
-
 });
 
