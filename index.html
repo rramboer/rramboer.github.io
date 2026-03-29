@@ -6,64 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Ryan Ramboer" />
     <meta name="keywords" content="Ryan Ramboer, portfolio, website, swe, recruit, jobs, software engineering" />
-    <meta name="description" content="Ryan's Personal Website" />
-    <meta name="robots" content="index, nofollow" />
-    <meta property="og:title" content="Ryan's Personal Website" />
-    <meta property="og:description" content="Ryan's Personal Website" />
+    <meta name="description" content="Ryan Ramboer — Software Engineer at FactSet. BSE in Computer Science from the University of Michigan. Portfolio, projects, and contact." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Ryan Ramboer | Software Engineer" />
+    <meta property="og:description" content="Software Engineer at FactSet. BSE in Computer Science from the University of Michigan." />
     <meta property="og:image" content="https://rramboer.github.io/images/share_headshot.jpg" />
     <meta property="og:url" content="https://rramboer.github.io/" />
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ryan Ramboer | Software Engineer" />
+    <meta name="twitter:description" content="Software Engineer at FactSet. BSE in Computer Science from the University of Michigan." />
+    <meta name="twitter:image" content="https://rramboer.github.io/images/share_headshot.jpg" />
 
-    <title>Ryan's Personal Website</title>
+    <title>Ryan Ramboer | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://cdn.simpleicons.org" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="images/favicon.ico" />
-    <script src="https://kit.fontawesome.com/6e37128a3a.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<script src="https://unpkg.com/lucide@1.7.0" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ryan Ramboer",
+        "url": "https://rramboer.github.io",
+        "image": "https://rramboer.github.io/images/share_headshot.jpg",
+        "jobTitle": "Software Engineer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "FactSet"
+        },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Michigan"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/ryan-ramboer/",
+            "https://github.com/rramboer"
+        ]
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGRZRC9SHB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SGRZRC9SHB');
+    </script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SGRZRC9SHB"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-SGRZRC9SHB');
-</script>
-
 <body>
-    <div class="scroll-up-btn">
-        <i class="fa-solid fa-angles-up"></i>
+    <div class="scroll-up-btn" role="button" aria-label="Scroll to top" tabindex="0">
+        <i data-lucide="chevrons-up"></i>
     </div>
     <nav class="navbar">
         <div class="max-width">
             <div class="logo"><a href="#">Ryan <span>Ramboer</span></a></div>
             <ul class="menu">
-                <!-- <li><a href="#home">Home</a></li> -->
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projs">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-btn">
-                <i class='fa-solid fa-bars'></i>
+            <div class="menu-btn" role="button" aria-label="Menu" aria-expanded="false" tabindex="0">
+                <i data-lucide="menu"></i>
             </div>
         </div>
     </nav>
 
     <!-- home section start -->
     <section class="home" id="home">
+        <canvas id="particle-canvas"></canvas>
         <div class="max-width">
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Ryan Ramboer</div>
+                <h1 class="text-2">Ryan Ramboer</h1>
                 <div class="text-3">and <span class="typing"></span></div>
-                <a href="https://rramboer.github.io/resume/" target="_blank"><i class="fa-solid fa-file-arrow-down"></i>
+                <a href="https://rramboer.github.io/resume/" target="_blank"><i data-lucide="file-down"></i>
                     View Resume</a>
             </div>
         </div>
@@ -72,22 +100,23 @@
     <!-- about section start -->
     <section class="about" id="about">
         <div class="max-width">
-            <h2 class="title">About Me</h2>
-            <div class="about-content">
+            <h2 class="title reveal">About</h2>
+            <div class="about-content reveal">
                 <div class="column left">
                     <img src="images/Headshot.jpg" alt="Photo of the creator of this website" />
                 </div>
                 <div class="column right">
                     <div class="text">I'm Ryan and I'm a: </div>
                     <div class="text"><span class="typing-2"></span></div>
-                    <p>I'm a software engineer at
+                    <p>Software engineer at
                         <a class="factset" href="https://www.factset.com/" target="_blank">FactSet</a>
-                        with a Bachelor of Science in Engineering degree in Computer Science from the
-                        <a class="uofm" href="https://eecs.engin.umich.edu/" target="_blank">University of Michigan</a>!
-                        I am interested in software engineering and financial markets and technology.
+                        with a BSE in Computer Science from the
+                        <a class="uofm" href="https://eecs.engin.umich.edu/" target="_blank">University of Michigan</a>.
+                        I build software at the intersection of engineering and financial technology.
+                        When I'm not at work, I'm usually tinkering with a side project, playing a sport, or trading the markets.
                     </p>
                     <a class="button" href="https://rramboer.github.io/resume/" target="_blank"><i
-                            class="fa-solid fa-file-arrow-down"></i>
+                            data-lucide="file-down"></i>
                         View Resume</a>
                 </div>
             </div>
@@ -97,18 +126,17 @@
     <!-- education section start -->
     <section class="education" id="education">
         <div class="max-width">
-            <h2 class="title">Education</h2>
-            <div class="educ-content">
+            <h2 class="title reveal">Education</h2>
+            <div class="educ-content reveal">
                 <div class="degree" tabindex="0">
                     <div class="left">
-                        <img class="logo" src="images/uofm.png" alt="University of Michigan logo" />
+                        <img loading="lazy" class="logo" src="images/uofm.png" alt="University of Michigan logo" />
                     </div>
                     <div class="right">
                         <p class="text">BSE Computer Science</p>
                         <p class="date">Graduated December 2023</p>
                         <p class="gpa">GPA: 3.89/4.00</p>
-                        <p class="awards"><strong>Awards:</strong> Summa Cum Laude, Dean's List, University Honors,
-                            James B. Angell Scholar, Regents Scholar</p>
+                        <p class="awards">Summa Cum Laude, James B. Angell Scholar, Regents Scholar, University Honors, Dean's List</p>
                     </div>
                 </div>
 
@@ -117,7 +145,7 @@
                     <div class="items">
                         <div class="item" tabindex="0">
                             <a href="https://sites.google.com/umich.edu/thetacapitalum/home" target="_blank"><img
-                                    src="images/theta.jpg" alt="Theta Capital Logo"></a>
+                                    loading="lazy" src="images/theta.jpg" alt="Theta Capital Logo"></a>
                             <div class="words">
                                 <p class="text">Theta Capital Investment Club</p>
                                 <p class="desc">Vice President, Treasurer</p>
@@ -125,7 +153,7 @@
                         </div>
                         <div class="item" tabindex="0">
                             <a href="https://twitter.com/hockeyhousepod/status/1638272670520180738" target="_blank"><img
-                                    src="images/champ_ring.png" alt="National Championship Ring"></a>
+                                    loading="lazy" src="images/champ_ring.png" alt="National Championship Ring"></a>
                             <div class="words">
                                 <p class="text">Michigan Wolverines DIII ACHA Hockey</p>
                                 <p class="desc">2023 National Champion</p>
@@ -133,7 +161,7 @@
                         </div>
                         <div class="item" tabindex="0">
                             <a href="https://web.archive.org/web/20221130093944/https://www.umcareerfair.org/"
-                                target="_blank"><img src="images/cf.png" alt="Career Fair 2022 Logo"></a>
+                                target="_blank"><img loading="lazy" src="images/cf.png" alt="Career Fair 2022 Logo"></a>
                             <div class="words">
                                 <p class="text">UM Fall Engineering Career Fair</p>
                                 <p class="desc">Webmaster</p>
@@ -142,7 +170,7 @@
                         <div class="item" tabindex="0">
                             <a href="https://lsa.umich.edu/econ/undergraduates/student-groups/michigan-journal-of-economics--mje-.html"
                                 target="_blank">
-                                <img src="images/mje.jfif" alt="MJE Logo"></a>
+                                <img loading="lazy" src="images/mje.jfif" alt="MJE Logo"></a>
                             <div class="words">
                                 <p class="text">Michigan Journal of Economics</p>
                                 <p class="desc">Editor</p>
@@ -150,7 +178,7 @@
                         </div>
                         <div class="item" tabindex="0">
                             <a href="https://www.linkedin.com/company/qcfum/about/" target="_blank"><img
-                                    src="images/qcf.jfif" alt="QCF Logo"></a>
+                                    loading="lazy" src="images/qcf.jfif" alt="QCF Logo"></a>
                             <div class="words">
                                 <p class="text">QuantEdge</p>
                                 <p class="desc">Cofounder, Secretary</p>
@@ -164,84 +192,84 @@
                     <div class="courses">
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-sitemap"></i>
+                                <i data-lucide="network"></i>
                                 <div class="text">Data Structures & Algorithms</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-microchip"></i>
+                                <i data-lucide="cpu"></i>
                                 <div class="text">Computer Organization</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-network-wired"></i>
+                                <i data-lucide="binary"></i>
                                 <div class="text">Computer Science Theory</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-user-secret"></i>
+                                <i data-lucide="shield"></i>
                                 <div class="text">Computer Security</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-code-branch"></i>
+                                <i data-lucide="git-branch"></i>
                                 <div class="text">Software Engineering</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-brain"></i>
+                                <i data-lucide="brain"></i>
                                 <div class="text">Artificial Intelligence</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-code"></i>
+                                <i data-lucide="layout-dashboard"></i>
                                 <div class="text">User Interface Development</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                <i data-lucide="grid-3x3"></i>
                                 <div class="text">Linear Algebra</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-chart-area"></i>
+                                <i data-lucide="chart-spline"></i>
                                 <div class="text">Multivariable & Vector Calculus</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-globe"></i>
+                                <i data-lucide="globe"></i>
                                 <div class="text">Web Design & Development</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-plug-circle-bolt"></i>
+                                <i data-lucide="zap"></i>
                                 <div class="text">Electricity & Magnetism</div>
                             </div>
                         </div>
 
                         <div class="card" tabindex="0">
                             <div class="box">
-                                <i class="fa-solid fa-compass-drafting"></i>
+                                <i data-lucide="drafting-compass"></i>
                                 <div class="text">Materials & Manufacturing</div>
                             </div>
                         </div>
@@ -255,158 +283,172 @@
     <!-- skills section start -->
     <section class="skills" id="skills">
         <div class="max-width">
-            <h2 class="title">Skills</h2>
-            <div class="skills-content">
-                <!-- <div class="column left">
-                    <div class="text">Like what you see?</div>
-                    <p>Here's what I've done with these skills:</p>
-                    <a href="#projs"><i class="fa-solid fa-user-astronaut"></i> Projects</a>
-                </div> -->
+            <h2 class="title reveal">Skills</h2>
+            <div class="skills-content reveal">
                 <div class="column right">
-                    <div class="card" tabindex="0">
+                    <!-- Languages -->
+                    <div class="card" tabindex="0" data-color="#00599C">
                         <div class="box">
-                            <img class="icon" src="images/cpp.svg">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/cplusplus" alt="C++ logo">
                             <div class="text">C++</div>
                         </div>
                     </div>
-
-                    <div class="card" tabindex="0">
+                    <div class="card" tabindex="0" data-color="#A8B9CC">
                         <div class="box">
-                            <img class="icon" src="images/c.png">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/c" alt="C logo">
                             <div class="text">C</div>
                         </div>
                     </div>
-
-                    <div class="card" tabindex="0">
+                    <div class="card" tabindex="0" data-color="#3776AB">
                         <div class="box">
-                            <img class="icon" src="images/js.svg">
-                            <div class="text">JavaScript</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/ts.png">
-                            <div class="text">TypeScript</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/py.svg">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/python" alt="Python logo">
                             <div class="text">Python</div>
                         </div>
                     </div>
-
-                    <div class="card" tabindex="0">
+                    <div class="card" tabindex="0" data-color="#4EAA25">
                         <div class="box">
-                            <img class="icon" src="images/jquery.svg">
-                            <div class="text">JQuery</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/vue.svg">
-                            <div class="text">Vue</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/react.png">
-                            <div class="text">React</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/node.svg">
-                            <div class="text">Node.js</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/html.svg">
-                            <div class="text">HTML</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/css.svg">
-                            <div class="text">CSS</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/bootstrap.svg">
-                            <div class="text">Bootstrap</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/bash.png">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/gnubash" alt="Bash logo">
                             <div class="text">Bash</div>
                         </div>
                     </div>
-
-                    <div class="card" tabindex="0">
+                    <div class="card" tabindex="0" data-color="#003B57">
                         <div class="box">
-                            <img class="icon" src="images/git.png">
-                            <div class="text">Git</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/perforce.png">
-                            <div class="text">Perforce</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/vscode.svg">
-                            <div class="text">VS Code</div>
-                        </div>
-                    </div>
-
-                    <div class="card" tabindex="0">
-                        <div class="box">
-                            <img class="icon" src="images/sql_logo.png">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/sqlite" alt="SQL logo">
                             <div class="text">SQL</div>
                         </div>
                     </div>
 
-                    <div class="card" tabindex="0">
+                    <!-- Web -->
+                    <div class="card" tabindex="0" data-color="#F7DF1E">
                         <div class="box">
-                            <img class="icon" src="images/rpi.svg">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/javascript" alt="JavaScript logo">
+                            <div class="text">JavaScript</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#3178C6">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/typescript" alt="TypeScript logo">
+                            <div class="text">TypeScript</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#E34F26">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/html5" alt="HTML logo">
+                            <div class="text">HTML</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#663399">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/css" alt="CSS logo">
+                            <div class="text">CSS</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#61DAFB">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/react" alt="React logo">
+                            <div class="text">React</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#4FC08D">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/vuedotjs" alt="Vue logo">
+                            <div class="text">Vue</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#5FA04E">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/nodedotjs" alt="Node.js logo">
+                            <div class="text">Node</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#06B6D4">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/tailwindcss" alt="Tailwind CSS logo">
+                            <div class="text">Tailwind</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#7952B3">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/bootstrap" alt="Bootstrap logo">
+                            <div class="text">Bootstrap</div>
+                        </div>
+                    </div>
+
+                    <!-- AI -->
+                    <div class="card" tabindex="0" data-color="#D97757">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/claude" alt="Claude logo">
+                            <div class="text">Claude</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#ffffff">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/ollama/ffffff" alt="Ollama logo">
+                            <div class="text">Ollama</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#ffffff">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/modelcontextprotocol/ffffff" alt="MCP logo">
+                            <div class="text">MCP</div>
+                        </div>
+                    </div>
+
+                    <!-- OS / Hardware -->
+                    <div class="card" tabindex="0" data-color="#ffffff">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/linux/ffffff" alt="Linux logo">
+                            <div class="text">Linux</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#A22846">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/raspberrypi" alt="Raspberry Pi logo">
                             <div class="text">Raspberry Pi</div>
                         </div>
                     </div>
 
-                    <div class="card" tabindex="0">
+                    <!-- DevTools -->
+                    <div class="card" tabindex="0" data-color="#F05032">
                         <div class="box">
-                            <img class="icon" src="images/restapi.webp">
-                            <div class="text">REST API</div>
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/git" alt="Git logo">
+                            <div class="text">Git</div>
                         </div>
                     </div>
-
-                    <div class="card" tabindex="0">
+                    <div class="card" tabindex="0" data-color="#4C00FF">
                         <div class="box">
-                            <img class="icon" src="images/excel.png">
-                            <div class="text">MS Excel</div>
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/perforce" alt="Perforce logo">
+                            <div class="text">Perforce</div>
                         </div>
                     </div>
-
-                    <div class="card" tabindex="0">
+                    <div class="card" tabindex="0" data-color="#9135FF">
                         <div class="box">
-                            <img class="icon" src="images/vector.png">
-                            <div class="text">Vector CAPL</div>
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/vite" alt="Vite logo">
+                            <div class="text">Vite</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#00FF74">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/vitest" alt="Vitest logo">
+                            <div class="text">Vitest</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#C21325">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/jest" alt="Jest logo">
+                            <div class="text">Jest</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#126ED3">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/sonarqubeserver" alt="SonarQube logo">
+                            <div class="text">SonarQube</div>
+                        </div>
+                    </div>
+                    <div class="card" tabindex="0" data-color="#2088FF">
+                        <div class="box">
+                            <img loading="lazy" class="icon" src="https://cdn.simpleicons.org/githubactions" alt="GitHub Actions logo">
+                            <div class="text">CI/CD</div>
                         </div>
                     </div>
 
@@ -418,13 +460,14 @@
     <!-- projects section start -->
     <section class="projs" id="projs">
         <div class="max-width">
-            <h2 class="title">Projects</h2>
-            <div class="carousel owl-carousel">
+            <h2 class="title reveal">Projects</h2>
+            <div class="swiper carousel reveal">
+              <div class="swiper-wrapper">
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
                         <a href="https://github.com/rramboer/MichMoney" target="_blank">
-                            <img src="images/spartahack.png" alt="SpartaHack 9 logo" />
+                            <img loading="lazy" src="images/spartahack.png" alt="SpartaHack 9 logo" />
                             <div class="text">MichMoney - SpartaHack 9 Hackathon</div>
                             <p>FinTech web app with live-market global Forex visualization, and earnings call transcript
                                 sentiment analysis heatmap using NLP; Won Best FinTech Hack for Best Use of Digital
@@ -434,10 +477,10 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
                         <a href="https://devpost.com/software/wolvwealth" target="_blank">
-                            <img src="images/mhacks16.jpg" alt="MHacks 16 logo" />
+                            <img loading="lazy" src="images/mhacks16.jpg" alt="MHacks 16 logo" />
                             <div class="text">WolvWealth - MHacks 16 Hackathon</div>
                             <p>Portfolio optimization web app with a dashboard and API that allows users to create
                                 optimal, data-driven portfolios given initial stock holdings and uninvested cash;
@@ -447,10 +490,10 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
                         <a href="https://devpost.com/software/fastr-food" target="_blank">
-                            <img src="images/mhacks.png" alt="MHacks 14 logo" />
+                            <img loading="lazy" src="images/mhacks.png" alt="MHacks 14 logo" />
                             <div class="text">Fastr Food - MHacks 14 Hackathon</div>
                             <p>Directs users to the dining hall with the quickest meal acquisition time using
                                 crowdsourced line length data and travel time from Google Maps API; Won Best Beginner
@@ -459,10 +502,10 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
                         <a href="https://github.com/rramboer/A-Bot/tree/master#readme" target="_blank">
-                            <img src="images/abot.png" alt="Humanoid casino robot" />
+                            <img loading="lazy" src="images/abot.png" alt="Humanoid casino robot" />
                             <div class="text">A-Bot Discord Bot</div>
                             <p>Multi-purpose Discord bot that supports general server management capabilities,
                                 entertainment features like a casino and memes, as well as other admin commands.
@@ -471,10 +514,10 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
                         <a href="https://rramboer.github.io/recipe-book" target="_blank">
-                            <img src="images/recipebook.png" alt="Screenshot of the recipe book homepage" />
+                            <img loading="lazy" src="images/recipebook.png" alt="Screenshot of the recipe book homepage" />
                             <div class="text">Healthy For Life Recipe Book</div>
                             <p>Web-based recipe book designed for accessibility and extensibility using HTML, Bootstrap,
                                 Vue.js, and JSON</p>
@@ -482,10 +525,10 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
                         <a href="https://github.com/rramboer/sudoku-solver" target="_blank">
-                            <img src="images/sudoku.png"
+                            <img loading="lazy" src="images/sudoku.png"
                                 alt="Screenshot of the output of the demo mode of the sudoku solver program" />
                             <div class="text">Sudoku Solver</div>
                             <p>Multi-mode sudoku game solver written in C, tested on one million sudoku games</p>
@@ -493,10 +536,10 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
                         <a href="https://github.com/rramboer/stock-simulator" target="_blank">
-                            <img src="images/stocks.png" alt="Screenshot of the results from running this program" />
+                            <img loading="lazy" src="images/stocks.png" alt="Screenshot of the results from running this program" />
                             <div class="text">Stock Simulator</div>
                             <p>Stock simulator that uses a complex systems Monte Carlo approach to
                                 predict a stock rally or crash based on a paramterized initial sentiment and the
@@ -506,11 +549,11 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
                         <a href="https://web.archive.org/web/20221130093944/https://www.umcareerfair.org/"
                             target="_blank">
-                            <img src="images/cf.png" alt="Logo from the 2022 Fall Engineering Career Fair" />
+                            <img loading="lazy" src="images/cf.png" alt="Logo from the 2022 Fall Engineering Career Fair" />
                             <div class="text">Engineering Career Fair Website</div>
                             <p>Constructed and maintained the website for the 2022 University of Michigan Fall
                                 Engineering Career Fair, generating $260,000+ and 26,000+ visits</p>
@@ -518,9 +561,9 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
-                        <img src="images/seamcarve.png"
+                        <img loading="lazy" src="images/seamcarve.png"
                             alt="Seam-carved, grayscale version of the photo of the creator of this website from the about section" />
                         <div class="text">Seam Carving Application</div>
                         <p>Seam carving algorithm for content-aware image resizing; Alters the size of an image by
@@ -528,38 +571,38 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
                         <a href="https://rramboer.github.io/asterballs/" target="_blank">
-                            <img src="images/game.png" alt="A screenshot of gameplay from the AsterBalls game" />
+                            <img loading="lazy" src="images/game.png" alt="A screenshot of gameplay from the AsterBalls game" />
                             <div class="text">AsterBalls Game</div>
                             <p>HTML canvas game made entirely in vanilla JavaScript. Current Highscore: 260,500</p>
                         </a>
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
-                        <img src="images/sql.png" alt="SQL logo" />
+                        <img loading="lazy" src="images/sql.png" alt="SQL logo" />
                         <div class="text">SQL Clone</div>
                         <p>Emulates a basic relational database with an interface based on a subset of a structured
                             query language</p>
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
-                        <img src="images/nlp.jpg" alt="Infographic about natural language processing" />
+                        <img loading="lazy" src="images/nlp.jpg" alt="Infographic about natural language processing" />
                         <div class="text">Natural Language Processor</div>
                         <p>Uses machine learning and natural language processing techniques to automatically identify
                             the subject of posts from an online course messaging forum</p>
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="swiper-slide card">
                     <div class="box">
                         <a href="https://github.com/rramboer/CollatzConjecture" target="_blank">
-                            <img src="images/collatz.png" alt="Visual diagram of the Collatz Conjecture" />
+                            <img loading="lazy" src="images/collatz.png" alt="Visual diagram of the Collatz Conjecture" />
                             <div class="text">Collatz Conjecture Calculator</div>
                             <p>Also known as the 3n+1 problem in mathematics. Determines the number of iterations
                                 required for any number or class of numbers to reach 1</p>
@@ -567,6 +610,8 @@
                     </div>
                 </div>
 
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -574,45 +619,20 @@
     <!-- contact section start -->
     <section class="contact" id="contact">
         <div class="max-width">
-            <h2 class="title">Contact</h2>
-            <div class="contact-content">
+            <h2 class="title reveal">Contact</h2>
+            <div class="contact-content reveal">
                 <div class="column left">
-                    <div class="text">Get In Touch</div>
                     <div class="icons">
                         <div class="row">
-                            <i class="fa-solid fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Ryan Ramboer</div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div class="info">
-                                <div class="head">Location</div>
-                                <div class="sub-title">Michigan, United States</div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <i class="fa-solid fa-envelope"></i>
+                            <i data-lucide="mail"></i>
                             <div class="info">
                                 <div class="head">Email</div>
-                                <div class="sub-title">ryanramboer@gmail.com</div>
+                                <div class="sub-title"><a href="mailto:ryanramboer@gmail.com">ryanramboer@gmail.com</a></div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <i class="fa-solid fa-phone"></i>
-                            <div class="info">
-                                <div class="head">Phone Number</div>
-                                <div class="sub-title">(248) 880-1513</div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <i class="fa-brands fa-linkedin"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="brand-icon"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                             <div class="info">
                                 <div class="head">LinkedIn</div>
                                 <div class="sub-title"><a href="https://www.linkedin.com/in/ryan-ramboer/"
@@ -621,7 +641,7 @@
                         </div>
 
                         <div class="row">
-                            <i class="fa-brands fa-github"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="brand-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                             <div class="info">
                                 <div class="head">GitHub</div>
                                 <div class="sub-title"><a href="https://github.com/rramboer"
@@ -629,33 +649,23 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                            <i data-lucide="phone"></i>
+                            <div class="info">
+                                <div class="head">Phone Number</div>
+                                <div class="sub-title"><a href="tel:+12488801513">(248) 880-1513</a></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <i data-lucide="map-pin"></i>
+                            <div class="info">
+                                <div class="head">Location</div>
+                                <div class="sub-title">United States of America</div>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                <div class="column right">
-                    <div class="text">Message me</div>
-                    <form action="https://formsubmit.co/rramboer@umich.edu" method="POST">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="box">
-                        <input type="hidden" name="_subject" value="Contact Submission">
-                        <input type="text" name="_honey" style="display:none">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" name="name" placeholder="Name" required />
-                            </div>
-                            <div class="field email">
-                                <input type="email" name="email" placeholder="Email" required />
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" name="subject" placeholder="Subject" required />
-                        </div>
-                        <div class="field textarea">
-                            <textarea name="message" cols="30" rows="10" placeholder="Message..." required></textarea>
-                        </div>
-                        <div class="button">
-                            <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -663,9 +673,10 @@
 
     <!-- footer section start -->
     <footer>
-        <span>Created by <a href="#about"><i class="fa-solid fa-chess-knight"></i> Ryan Ramboer</a></span>
+        <span>Created by&ensp;<a href="#about"><i data-lucide="user-round"></i>Ryan Ramboer</a></span>
     </footer>
 
+    <script src="particles.js"></script>
     <script src="script.js"></script>
 </body>
 
