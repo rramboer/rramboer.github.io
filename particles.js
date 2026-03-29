@@ -3,7 +3,7 @@
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
 
-    const THEME_COLOR = '#3572ff';
+    var themeColor = document.documentElement.getAttribute('data-theme') === 'light' ? '#2558cc' : '#3572ff';
     const PARTICLE_COUNT_DESKTOP = 80;
     const PARTICLE_COUNT_MOBILE = 40;
     const CONNECTION_DISTANCE = 150;
@@ -83,7 +83,7 @@
             // Draw particle
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = THEME_COLOR;
+            ctx.fillStyle = themeColor;
             ctx.fill();
 
             // Connect nearby particles
@@ -96,7 +96,7 @@
                     ctx.beginPath();
                     ctx.moveTo(p.x, p.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = THEME_COLOR;
+                    ctx.strokeStyle = themeColor;
                     ctx.globalAlpha = 1 - dist / CONNECTION_DISTANCE;
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
@@ -157,4 +157,8 @@
 
     resize();
     createParticles();
+
+    window.updateParticleColor = function (color) {
+        themeColor = color;
+    };
 })();

@@ -29,6 +29,74 @@
     --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
+/* ── light mode overrides ── */
+[data-theme="light"] {
+    --color-theme: #2558cc;
+    --color-theme-glow: rgba(37, 88, 204, 0.2);
+    --color-accent: #1d4ed8;
+    --gradient-theme: linear-gradient(135deg, #2558cc, #1d4ed8);
+
+    --bg-primary: #f5f5fa;
+    --bg-card: rgba(0, 0, 0, 0.03);
+    --bg-glass: rgba(255, 255, 255, 0.7);
+    --bg-glass-hover: rgba(255, 255, 255, 0.9);
+
+    --glass-blur: blur(16px) saturate(1.1);
+    --glass-blur-heavy: blur(24px) saturate(1.2);
+
+    --text-primary: #1a1a2e;
+    --text-secondary: #555580;
+    --text-muted: #8888a8;
+
+    --border-glass: rgba(0, 0, 0, 0.1);
+    --border-hover: rgba(37, 88, 204, 0.3);
+
+    --shadow-glow: 0 0 40px rgba(37, 88, 204, 0.06);
+    --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .navbar .logo a { color: #1a1a2e; }
+[data-theme="light"] .navbar .menu li a:hover { color: #1a1a2e; }
+[data-theme="light"] .menu-btn { color: #1a1a2e; }
+[data-theme="light"] .menu-btn svg { stroke: #1a1a2e; }
+
+[data-theme="light"] .navbar.sticky {
+    background: rgba(245, 245, 250, 0.8);
+}
+
+[data-theme="light"] .home { color: #1a1a2e; }
+
+[data-theme="light"] .home .home-content .text-2 {
+    background: linear-gradient(135deg, #1a1a2e 40%, var(--color-accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+[data-theme="light"] .education .educ-content .card:hover svg,
+[data-theme="light"] .education .educ-content .card:focus svg {
+    stroke: var(--color-theme);
+}
+
+[data-theme="light"] section::after {
+    opacity: 0.04;
+}
+
+[data-theme="light"] .about .about-content .right a.factset:hover,
+[data-theme="light"] .about .about-content .right a.uofm:hover {
+    color: #1a1a2e;
+}
+
+[data-theme="light"] .contact .contact-content .info .sub-title a:hover { color: #1a1a2e; }
+[data-theme="light"] footer span a:hover { color: #1a1a2e; }
+
+/* ── no-transition on load ── */
+html.no-transition,
+html.no-transition *,
+html.no-transition *::before,
+html.no-transition *::after {
+    transition: none !important;
+}
+
 ::selection {
     background: var(--color-theme);
     color: white;
@@ -96,6 +164,36 @@ html {
     padding: 0 24px;
 }
 
+/* ── theme toggle ── */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 16px;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+    transform: scale(1.1);
+}
+
+.theme-toggle svg {
+    width: 28px;
+    height: 28px;
+    stroke: var(--text-primary);
+}
+
+/* sun shown in dark (click for light), moon shown in light (click for dark) */
+.theme-icon-light { display: block; }
+.theme-icon-dark { display: none; }
+[data-theme="light"] .theme-icon-light { display: none; }
+[data-theme="light"] .theme-icon-dark { display: block; }
+
 .navbar .logo a {
     color: #fff;
     font-size: 32px;
@@ -132,9 +230,11 @@ html {
 
 .menu-btn {
     color: #fff;
-    font-size: 23px;
     cursor: pointer;
     display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
 }
 
 .menu-btn svg {
@@ -1075,7 +1175,7 @@ footer span a:hover {
 
 @media (max-width: 947px) {
     .menu-btn {
-        display: block;
+        display: flex;
         z-index: 999;
     }
 
@@ -1106,6 +1206,11 @@ footer span a:hover {
         margin: 20px 0;
         font-size: 24px;
         color: var(--text-primary);
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+        margin-right: 12px;
     }
 
     .home .home-content .text-2 {
@@ -1436,5 +1541,12 @@ footer span a:hover {
 
     .projs .carousel .card .text {
         font-size: 16px;
+    }
+}
+
+/* ── light mode responsive overrides ── */
+@media (max-width: 947px) {
+    [data-theme="light"] .navbar .menu {
+        background: rgba(245, 245, 250, 0.95);
     }
 }
