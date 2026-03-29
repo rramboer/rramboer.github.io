@@ -2,7 +2,71 @@ document.addEventListener('DOMContentLoaded', function () {
     // initialize lucide icons
     lucide.createIcons();
 
-    // print shortcut opens resume PDF instead
+    // ── theme toggle ──
+    var themeToggle = document.querySelector('.theme-toggle');
+
+    function getTheme() {
+        return document.documentElement.getAttribute('data-theme') || 'dark';
+    }
+
+    function updateSkillIcons(theme) {
+        var swaps = {
+            'ollama': { dark: 'ffffff', light: '000000' },
+            'modelcontextprotocol': { dark: 'ffffff', light: '000000' },
+            'linux': { dark: 'ffffff', light: '000000' }
+        };
+        document.querySelectorAll('.skills .card').forEach(function (card) {
+            var img = card.querySelector('img.icon');
+            if (!img) return;
+            var src = img.getAttribute('src');
+            Object.keys(swaps).forEach(function (key) {
+                if (src.includes('/' + key)) {
+                    img.setAttribute('src', 'https://cdn.simpleicons.org/' + key + '/' + swaps[key][theme]);
+                    card.setAttribute('data-color', theme === 'light' ? '#000000' : '#ffffff');
+                }
+            });
+        });
+    }
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (window.updateParticleColor) {
+            window.updateParticleColor(theme === 'light' ? '#2558cc' : '#3572ff');
+        }
+        updateSkillIcons(theme);
+        lucide.createIcons();
+    }
+
+    themeToggle.addEventListener('click', function () {
+        setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+    });
+
+    // respect OS theme changes (only if no explicit preference stored)
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (e) {
+        if (!localStorage.getItem('theme')) {
+            setTheme(e.matches ? 'light' : 'dark');
+        }
+    });
+
+    // sync across tabs
+    window.addEventListener('storage', function (e) {
+        if (e.key === 'theme' && e.newValue) {
+            setTheme(e.newValue);
+        }
+    });
+
+    // apply initial icon state
+    updateSkillIcons(getTheme());
+
+    // remove no-transition class after first paint
+    requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+            document.documentElement.classList.remove('no-transition');
+        });
+    });
+
+    // ── print shortcut opens resume PDF ──
     window.addEventListener('keydown', function (e) {
         if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
             e.preventDefault();
@@ -10,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // navbar sticky + scroll-up button
+    // ── navbar sticky + scroll-up button ──
     window.addEventListener('scroll', function () {
         var navbar = document.querySelector('.navbar');
         var scrollBtn = document.querySelector('.scroll-up-btn');
@@ -31,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // toggle menu/navbar script
+    // ── toggle menu/navbar ──
     var menuBtn = document.querySelector('.menu-btn');
     var menu = document.querySelector('.navbar .menu');
 
@@ -57,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // typing animation script
+    // ── typing animations ──
     new Typed(".typing", {
         strings: ["I'm a Software Engineer."],
         typeSpeed: 100,
@@ -77,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loop: true
     });
 
-    // projects carousel (Swiper)
+    // ── projects carousel (Swiper) ──
     new Swiper('.carousel', {
         slidesPerView: 1,
         spaceBetween: 12,
@@ -100,24 +164,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // skill icon hover: scale + brand color glow
+    // ── skill card hover: scale + brand color glow ──
     var skillCards = document.querySelectorAll('.skills .skills-content .card');
 
     skillCards.forEach(function (card) {
         var icon = card.querySelector('.icon');
-        var color = card.dataset.color || '#60a5fa';
 
         card.addEventListener('mouseenter', function () {
+            var color = card.dataset.color || '#60a5fa';
             icon.style.transform = 'scale(1.2)';
             card.style.borderColor = color + '60';
             card.style.boxShadow = '0 0 20px ' + color + ', 0 0 40px ' + color + '80';
         });
 
         card.addEventListener('mousemove', function (e) {
+            var color = card.dataset.color || '#60a5fa';
+            var alpha = getTheme() === 'light' ? '33' : '55';
             var rect = card.getBoundingClientRect();
             var x = e.clientX - rect.left;
             var y = e.clientY - rect.top;
-            card.style.background = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, ' + color + '55 0%, transparent 65%)';
+            card.style.background = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, ' + color + alpha + ' 0%, transparent 65%)';
         });
 
         card.addEventListener('mouseleave', function () {
@@ -128,10 +194,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         card.addEventListener('focus', function () {
+            var color = card.dataset.color || '#60a5fa';
+            var alpha = getTheme() === 'light' ? '33' : '55';
             icon.style.transform = 'scale(1.2)';
             card.style.borderColor = color + '60';
             card.style.boxShadow = '0 0 20px ' + color + ', 0 0 40px ' + color + '80';
-            card.style.background = 'radial-gradient(circle at 50% 50%, ' + color + '55 0%, transparent 65%)';
+            card.style.background = 'radial-gradient(circle at 50% 50%, ' + color + alpha + ' 0%, transparent 65%)';
         });
 
         card.addEventListener('blur', function () {
@@ -142,11 +210,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // degree card mouse glow
+    // ── degree card mouse glow ──
     var degreeCard = document.querySelector('.education .educ-content .degree');
-    var degreeColor = '#3572ff';
 
     degreeCard.addEventListener('mousemove', function (e) {
+        var degreeColor = getTheme() === 'light' ? '#2558cc' : '#3572ff';
         var rect = degreeCard.getBoundingClientRect();
         var x = e.clientX - rect.left;
         var y = e.clientY - rect.top;
@@ -159,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
         degreeCard.style.borderColor = '';
     });
 
-    // scroll reveal
+    // ── scroll reveal ──
     var revealElements = document.querySelectorAll('.reveal');
     var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
