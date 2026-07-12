@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var swaps = {
             'ollama': { dark: 'ffffff', light: '000000' },
             'modelcontextprotocol': { dark: 'ffffff', light: '000000' },
-            'linux': { dark: 'ffffff', light: '000000' }
+            'linux': { dark: 'ffffff', light: '000000' },
+            'pandas': { dark: 'ffffff', light: '000000' }
         };
         document.querySelectorAll('.skills .card').forEach(function (card) {
             var img = card.querySelector('img.icon');
